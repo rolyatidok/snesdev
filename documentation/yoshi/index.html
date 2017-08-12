@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<title>Yoshi's SNES Documentation</title>
+<head>
+<style>
+main{
+	display:flex;
+	width:100vw;
+	height:100vh;
+}
+.navigation{
+	width:200px;
+}
+.main-content{
+	width:100%;
+}
+</style>
+<script>
+    function nav(pageid){
+    	document.getElementById("mainContent").src = pageid;
+    }
+</script>
+
+
+</head>
+<body>
+<main>
+<div id="navigation" role="navigation" class="navigation">
+	<br><a href="javascript:void(0)" onclick="nav('READ.ME')">READ.ME</a>
+	<br><a href="javascript:void(0)" onclick="nav('SNES.0')">SNES.0</a>
+	<br><a href="javascript:void(0)" onclick="nav('SNES.1')">SNES.1</a>
+	<br><a href="javascript:void(0)" onclick="nav('SNES.2')">SNES.2</a>
+	<br><a href="javascript:void(0)" onclick="nav('SNES.3')">SNES.3</a>
+	<br><a href="javascript:void(0)" onclick="nav('SNES.4')">SNES.4</a>
+	<br><a href="javascript:void(0)" onclick="nav('SNES.5')">SNES.5</a>
+	<br><a href="javascript:void(0)" onclick="nav('SNES.6')">SNES.6</a>
+	<br><a href="javascript:void(0)" onclick="nav('SNES.7')">SNES.7</a>
+	<br><a href="javascript:void(0)" onclick="nav('SNES.8')">SNES.8</a>
+</div>
+<iframe src="READ.ME" id="mainContent" role="main" class="main-content"></iframe>
+
+</main>
+</div>
+</body>
+</html>
