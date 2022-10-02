@@ -1,0 +1,10 @@
+# output
+roms/*
+
+# game rom files
+*.smc
+*.sfc
+
+# object files
+*.obj
+*.o
