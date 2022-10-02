@@ -1,6 +1,3 @@
-# output
-roms/*
-
 # game rom files
 *.smc
 *.sfc
