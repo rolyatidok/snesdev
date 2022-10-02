@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../snes-hello"
+		},
+		{
+			"path": "../zelda3"
+		}
+	],
+	"settings": {}
+}

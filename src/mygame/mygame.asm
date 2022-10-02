@@ -1,8 +1,8 @@
 ; SNES Initialization Tutorial code
 ; This code is in the public domain.
 
-.include "Header.inc"
-.include "Snes_Init.asm"
+.include "include/Header.inc"
+.include "include/Snes_Init.asm"
 
 ; Needed to satisfy interrupt definition in "Header.inc".
 VBlank:
