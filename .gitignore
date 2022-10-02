@@ -1,6 +1,7 @@
 # game rom files
 *.smc
 *.sfc
+*.bin
 
 # object files
 *.obj
