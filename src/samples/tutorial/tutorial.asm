@@ -1,25 +1,33 @@
-.include "header.inc"
+; SNES Initialization Tutorial code
+; This code is in the public domain.
+
+.include "Header.inc"
 .include "Snes_Init.asm"
-VBlank:		; Needed to satisfy interrupt definition in "header.inc"
-	RTI
+
+; Needed to satisfy interrupt definition in "Header.inc".
+VBlank:
+RTI
+
+.bank 0
+.section "MainCode"
+
 Start:
-	;initialize
+	; Initialize the SNES.
 	Snes_Init
-	sep 	#$20
-	;
-	; update the screen during vblank or hblank
-	lda	#%10000000 	; Force VBlank by turning off the screen
-	sta	$2100
-	; set the background color
-	; %0bbbbbgggggrrrrr (blue green red)
-	lda	#%00001111 	; low byte (gggrrrrr)
-	sta	$2122
-	lda	#%01111100	; high byte (0bbbbbgg)
-	sta	$2122		
-	; Done updating screen
-	lda #%00001111		; End VBlank
-	sta	$2100
-	;
-	; done with main program, loop forever
+
+	; Set the background color to green.
+	sep     #$20        ; Set the A register to 8-bit.
+	lda     #%10000000  ; Force VBlank by turning off the screen.
+	sta     $2100
+	lda     #%11100000  ; Load the low byte of the green color.
+	sta     $2122
+	lda     #%00000000  ; Load the high byte of the green color.
+	sta     $2122
+	lda     #%00001111  ; End VBlank, setting brightness to 15 (100%).
+	sta     $2100
+
+	; Loop forever.
 Forever:
-	jmp	Forever
+	jmp Forever
+
+.ends
